@@ -1,3 +1,5 @@
+import { findLast } from "@angular/compiler/src/directive_resolver";
+
 export class Satellite {
 
 	name: string;
@@ -15,9 +17,11 @@ export class Satellite {
    }
 	
 	isSpaceDebris(): boolean {
-		return true;
-   }
+		if(this.type.value === "Space Debris"){
+			return true
+		}else{
+			return false
+		};
+	};
+};
 
-}
-
-// TODO 3a: fix isSpaceDebris check
