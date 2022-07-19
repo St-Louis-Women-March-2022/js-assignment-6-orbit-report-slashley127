@@ -16,15 +16,17 @@ export class Satellite {
 		this.orbitType = orbitType;
 		this.operational = operational;
    }
+
+   isSpaceDebris(type: string): boolean {
+		if(this.type === "Space Debris"){
+			return true
+		}else{
+			return false
+		};
+	};
 	
 	
 };
 
-// export function isSpaceDebris(type: string): boolean {
-// 	if(this.type === "Space Debris"){
-// 		return true
-// 	}else{
-// 		return false
-// 	};
-// };
+
 
