@@ -1,7 +1,8 @@
 <h3>Satellite Count:</h3>
 <div class="counts">
-	<div>Total: <span class="counts-total" >NaN</span></div>
-	<script type="text/javascript">countByType('Space Debris')</script>
+	<div>Total: <span class="counts-total">{{totalCount()}}</span></div>
+	<!--<div *ngFor="let satellite of satellites">{{satellite.type}}: <span>{{countByType(satellite.type)}}</span></div>-->
+	
 </div>
 
 <!-- TODO 4: add logic to count number of satellites displayed -->

@@ -1,4 +1,5 @@
 import { findLast } from "@angular/compiler/src/directive_resolver";
+import { NodeStringDecoder } from "string_decoder";
 
 export class Satellite {
 
@@ -17,7 +18,7 @@ export class Satellite {
    }
 	
 	isSpaceDebris(): boolean {
-		if(this.type.value === "Space Debris"){
+		if(this.type === "Space Debris"){
 			return true
 		}else{
 			return false
