@@ -1,3 +1,6 @@
+import { findLast } from "@angular/compiler/src/directive_resolver";
+import { NodeStringDecoder } from "string_decoder";
+
 export class Satellite {
 
 	name: string;
@@ -13,11 +16,17 @@ export class Satellite {
 		this.orbitType = orbitType;
 		this.operational = operational;
    }
+
+   isSpaceDebris(type: string): boolean {
+		if(this.type === "Space Debris"){
+			return true
+		}else{
+			return false
+		};
+	};
 	
-	isSpaceDebris(): boolean {
-		return true;
-   }
+	
+};
 
-}
 
-// TODO 3a: fix isSpaceDebris check
+
